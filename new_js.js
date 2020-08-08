@@ -9,15 +9,15 @@ let name
 name = 'Василий'
 admin = name
 
-let result = 10+10+'10'
+let result = 10+10+'10' //1. будет 2010, приведенное к строке
 console.log(result)
-let result2 = 10+'10'+10
+let result2 = 10+'10'+10 //2. будет 101010, приведенное к строке
 console.log(result2)
-let result3 = 10+10++'10'
+let result3 = 10+10++'10' //3. будет ошибка, так как операции с 2 плюсами нет
 console.log(result3)
-let result4 = 10/-''
+let result4 = 10/-'' //4. будет -бесконечность
 console.log(result4)
-let result5 = 10/+'2,5'
+let result5 = 10/+'2,5' //5. будет NaN
 console.log(result5)
 
 /*
