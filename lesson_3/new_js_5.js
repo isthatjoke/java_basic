@@ -36,7 +36,7 @@ let photoProd = products.filter(function(prod) {
 });
 console.log(photoProd);
 products.sort(function(a, b) {
-    if (a.price > b.prie) {
+    if (a.price > b.price) {
     return 1;
     }
     if (a.price < b.price) {
