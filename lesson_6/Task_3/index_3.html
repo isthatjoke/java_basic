@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../fontawesome-free-5.14.0-web/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="bin" id="shopping-cart">
+            <p>Корзина
+            <i class="fas fa-shopping-cart"></i>
+                </p>
+            </div>
+                <div class="added-products" id="added-products">
+                <table class="products-table" id="products-table">
+                    <tr>
+                        <td>ID</td>
+                        <td>Название</td>
+                        <td>Цена</td>
+                        <td>Количество</td>
+                        <td></td>
+                    </tr>
+                    <tr id="all">
+                        <td>Итого: </td>
+                        <td></td>
+                        <td id="summary">0</td>
+                        <td><p>&#8381</p></td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        <div class="content">
+            <div class="product clearfix">
+                <div class="name">Товар 1</div>
+                <img src="23195107_prod_img_0-1000x1000.jpg" alt="">
+                <div class="price">1300 &#8381</div>
+                <button class="buy" data-id="0" data-price="1300" data-name="Товар 1">В корзину</button>
+            </div>
+            <div class="product clearfix">
+                <div class="name">Товар 2</div>
+                <img src="9150773133342.jpg" alt="">
+                <div class="price">2500 &#8381</div>
+                <button class="buy" data-id="1" data-price="2500" data-name="Товар 2">В корзину</button>
+            </div>
+            <div class="product clearfix">
+                <div class="name">Товар 3</div>
+                <img src="scale_1200.jpeg" alt="">
+                <div class="price">900 &#8381</div>
+                <button class="buy" data-id="2" data-price="900" data-name="Товар 3">В корзину</button>
+            </div>
+        </div>
+    </div>
+    <script src="new_js_3.js"></script>
+</body>
+</html>

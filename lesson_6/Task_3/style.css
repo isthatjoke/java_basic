@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    max-width: 1280px;
+    height: 100%;
+    position: relative;
+}
+
+.menu {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 2px;
+    background-color: darkgrey;
+    outline: 2px solid black;
+}
+
+.bin {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.bin p {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+.bin:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+}
+
+.content {
+    position: relative;
+    height: 500px;
+    
+}
+
+.product {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.name {
+    position: absolute;
+    left: 5px;
+}
+
+.product img {
+    width: 100px;
+    margin-top: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.price {
+    position: absolute;
+    bottom: 40px;
+    left: 5px;
+}
+
+.buy {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: springgreen;
+    bottom: 5px;
+}
+
+.buy:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px;
+}
+
+.buy:active,
+.buy:focus {
+    outline: none;
+}
+
+.added-products {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    width: 250px;
+    display: none;
+    z-index: 100;
+}
+
+.products-table {
+    outline: 1px solid grey;
+    background-color: yellow;
+}
+
+.products-table tr {
+    
+}
+
+.products-table td {
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.trash:hover {
+    cursor: pointer;
+    z-index: 0;
+}
