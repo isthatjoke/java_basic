@@ -20,10 +20,12 @@ bin.addEventListener("click", function(event) {
 	}
 });
 
+
 let products = {};
 
 
 class basket {
+    
     constructor(id, price, name, count=1) {
         this.id = id;
         this.price = price;
@@ -34,6 +36,7 @@ class basket {
     
 
     main() {
+        
         this.addProducts();
         this.addToCart();
         this.addRemoveListener();
@@ -47,7 +50,7 @@ class basket {
             
         } else {
             let row = `
-                <tr>
+                <tr id="row" data-id="${this.id}">
                     <td>${this.id}</td>
                     <td>${this.name}</td>
                     <td class="product-price" data-id="${this.id}">${this.price}</td>
@@ -78,14 +81,6 @@ class basket {
     }
 
 
-
-    doSum() {
-        summary.innerText = 0;
-        for(let el in products) {
-            summary.innerText = parseInt(summary.innerText) + parseInt(products[el].price) * parseInt(products[el].count);
-        };
-    }
-
     minusSum() {
         if (products[this.id].count == 0) {
             summary.innerText = parseInt(summary.innerText) - parseInt(this.price);
@@ -103,14 +98,28 @@ class basket {
 
     removeProductListener() {
         let productInBasket = document.querySelector(`.count[data-id="${this.id}"]`);
-        if (productInBasket.textContent == 1) {
-            productInBasket.parentNode.remove();
+        if (productInBasket.textContent == "1") {
+            let row = document.querySelector(`#row[data-id="${this.id}"]`);
+            row.remove();
             products[this.id].count = 0;
             this.doSum();
+            delete this.remBut;
+            delete this.productInBasket;
+            this.addRemoveListener();
         } else {
             productInBasket.textContent--;
             products[this.id].count--;
             this.doSum();
+            delete this.remBut;
+            delete this.productInBasket;
+            this.addRemoveListener();
+        };
+    }
+
+    doSum() {
+        summary.innerText = 0;
+        for(let el in products) {
+            summary.innerText = parseInt(summary.innerText) + parseInt(products[el].price) * parseInt(products[el].count);
         };
     }
 };
