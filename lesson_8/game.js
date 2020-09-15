@@ -86,7 +86,7 @@ class Table{
 
     isLineWon(a, b, c) {
         let value = this.mapValues[a.y][a.x] + this.mapValues[b.y][b.x] + this.mapValues[c.y][c.x];
-        if (value === 'XXX' || value === '000') {
+        if (value === 'XXX' || value === 'OOO') {
             return true;
         }    
     }
@@ -104,6 +104,7 @@ class Table{
             alert('game is over');
             this.cleanTheMap();
             this.cleanTheDesk();
+            this.changeStep();
         }
     }
 
