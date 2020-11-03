@@ -1,0 +1,50 @@
+s.modal_button_class {
+    width: 200px;
+    height: 50px;
+    background-color: burlywood;
+}
+
+.modal_class {
+    display: none;
+    z-index: 100;
+    width: 400px;
+    height: 150px;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    background-color: darkturquoise;
+    border: 1px solid black;
+}
+
+.close_modal_window {
+    display: block;
+    z-index: 100;
+    width: 400px;
+    height: 150px;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    background-color: darkturquoise;
+    border: 1px solid black;
+}
+
+.modal_content {
+    margin-top: 20px;
+    z-index: 1000; 
+}
+
+.close_modal {
+    color: darkred;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 28px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.modal_content p {
+    position: absolute;
+    margin-top: 30px;
+    background-color: white;
+}
+
